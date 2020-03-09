@@ -14,7 +14,7 @@ class m_2014_10_14_100000_create_user_table extends BaseCreateTableMigration
     public function tableSchema()
     {
         return function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->integer('id')->autoIncrement()->comment('Идентификатор');
             $table->string('username', 180);
             $table->string('username_canonical', 180);
             $table->string('email', 180);
