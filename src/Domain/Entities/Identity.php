@@ -141,6 +141,11 @@ class Identity implements UserInterface, EntityIdInterface
         return $this->roles;
     }
 
+    public function getRolesArray()
+    {
+        return unserialize($this->roles);
+    }
+
     public function setRoles($roles): void
     {
         $this->roles = $roles;
