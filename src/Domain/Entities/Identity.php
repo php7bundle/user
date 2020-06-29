@@ -153,7 +153,7 @@ class Identity implements UserInterface, EntityIdInterface
 
     public function getLogo()
     {
-        return 'https://www.gravatar.com/avatar/' . md5($this->getUsername()) . '?d=retro';
+        return 'https://www.gravatar.com/avatar/' . md5($this->getEmail()) . '?d=retro';
     }
 
     public function setLogo($logo): void
