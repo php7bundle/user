@@ -25,11 +25,11 @@ class Authenticator
     }
 
     public function getUser(Request $request = null) {
-        $request = $request ?: Request::createFromGlobals();
         if($this->isAuthenticated()) {
             $userEntity = $this->security->getToken()->getUser();
         } else {
-            $token = $request->query->get(HttpHeaderEnum::AUTHORIZATION);
+            $request = $request ?: Request::createFromGlobals();
+            $token = $request->query->get(HttpHeaderEnum::AUTHORIZATION) OR $request->request->get(HttpHeaderEnum::AUTHORIZATION);
             if(empty($token)) {
                 throw new UnauthorizedHttpException('Empty token!');
             }
