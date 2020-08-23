@@ -5,7 +5,7 @@ namespace PhpBundle\User\Domain\Entities;
 use PhpLab\Core\Enums\Measure\TimeEnum;
 use PhpBundle\Crypt\Domain\Enums\EncryptAlgorithmEnum;
 use PhpBundle\Crypt\Domain\Enums\EncryptFunctionEnum;
-use PhpBundle\Crypt\Domain\Enums\JwtAlgorithmEnum;
+use PhpBundle\Jwt\Domain\Enums\JwtAlgorithmEnum;
 
 class JwtProfileEntity
 {
